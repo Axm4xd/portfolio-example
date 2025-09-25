@@ -1,0 +1,169 @@
+/* *{
+    background-color: #080808;
+} */
+
+.homepage-container {
+    background: #080808;
+    width: 100%;
+    padding-bottom: 50px; /* Add padding to prevent content cutoff */
+}
+nav {
+    width: 80%;
+    background: #1B1B1B;
+    height: 10vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.hamburger-menu {
+    display: none; /* Hide by default on large screens */
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.navbar-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    width: 75%;
+}
+
+.navbar-item {
+    display: flex;
+    color: #9C9C9C;
+}
+
+.navbar-links {
+    width: 30%;
+}
+
+.navbar-link img {
+    height: 20px;
+    margin-left: 25%;
+}
+
+.main-content {
+    margin-top: 5%;
+    margin-left: 20%;
+    width: 60%;
+    display: flex;
+}
+.text {
+    color: white;
+}
+
+.image img {
+    width: 90%;
+}
+
+button {
+    background-color: #3F8E00;
+    border: 2px solid #62BA1B;
+    border-radius: 3px;
+    height: 15%;
+    width: 60%;
+    margin-top: 10%;
+    color: white;
+    
+}
+footer {
+    background-color: #080808;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-images {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer p {
+    color: #9C9C9C;
+    font-size: 1rem;
+    margin-right: 60%;
+}
+
+.footer img {
+    width: 11%;
+    height: auto;
+    margin: 0 10px;
+    filter: brightness(0.8);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1228px) {
+    .homepage-container {
+        height: auto; /* Adjust height for content */
+    }
+
+    nav {
+        justify-content: space-between; /* Space out logo and menu icon */
+        padding: 0 20px;
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .navbar-items {
+        display: none; /* Hide nav items */
+        flex-direction: column;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        background-color: #1B1B1B;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    .navbar-items.active {
+        display: flex; /* Show nav items when active */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+    }
+
+    .navbar-links {
+        width: auto; /* Adjust width */
+    }
+    .navbar-link img {
+        margin-left: 0;
+    }
+
+    .main-content {
+        flex-direction: column-reverse; /* Image on top, text below */
+        align-items: center;
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    .image img {
+        width: 60%; /* Adjust image size */
+        margin-bottom: 20px;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .footer p {
+        margin-right: 0; /* Center the 'Worked with' text */
+    }
+
+    .footer-images {
+        flex-wrap: wrap; /* Allow images to wrap */
+    }
+
+    .footer img {
+        width: 40%; /* Set width for 2 columns */
+        margin-bottom: 20px; /* Add space between rows */
+    }
+}
